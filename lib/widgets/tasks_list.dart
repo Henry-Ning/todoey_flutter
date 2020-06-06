@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:todoeyflutter/models/task_data.dart';
 
 
-
 class TasksList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,9 +15,7 @@ class TasksList extends StatelessWidget {
               taskTitle: taskData.tasks[index].name,
               isChecked: taskData.tasks[index].isDone,
               checkboxCallback: (checkboxState) {
-//            setState(() {
-//              widget.tasks[index].toggleDone();
-//            });
+                taskData.updateTask(taskData.tasks[index]);
               },
             );
           },
