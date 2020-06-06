@@ -13,7 +13,7 @@ class TasksList extends StatelessWidget {
           itemBuilder: (context, index) {
             return TaskTile(
               onLongPress: () {
-                taskData.deleteTask(index);
+                taskData.deleteTask(taskData.tasks[index]);
               },
               taskTitle: taskData.tasks[index].name,
               isChecked: taskData.tasks[index].isDone,
